@@ -1,0 +1,470 @@
+body {
+	font-family: Raleway;
+	margin:0 0 0 0;
+	padding: 0px;
+	background: rgb(21,32,63);
+
+}
+html{
+	margin:0px;
+	background-color: black;
+}
+h1{
+	font-weight: 300;
+	font-size: 72px;
+	margin-bottom: 10px;
+}
+h2{
+	font-weight: 300;
+}
+p{
+	font-weight: 100;
+	color: rgba(255,255,255,0.7);
+}
+figcaption{
+	z-index: 10;
+	position: absolute;
+	background-color: white;
+	width: 250px;
+	height: 40px;
+	opacity: .9;
+	left: 60%;
+}
+figcaption p{
+		color: black;
+		padding-top: 7px;
+		padding-left: 10px;
+		font-weight: 400;
+		font-size: 20px;
+}
+.highlight{
+	font-weight: 500;
+	color: rgba(255,255,255,0.9);
+}
+.row{
+	width: 100%;
+	height: 100%;
+}
+.fadeIn3{
+	animation-name: fadeIn;
+    animation-duration: 3s;
+}
+.fadeIn4{
+	animation-name: fadeIn;
+    animation-duration: 7s;
+}
+.fadeIn5{
+	animation-name: fadeIn;
+    animation-duration: 8s;
+}
+.changeInnen{
+	animation-name: changeInnen;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+.changeAussen{
+	animation-name: changeAussen;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+.fourBorders{
+	border:1px solid white;
+	height: 100%;
+	opacity: 0;
+	padding: 70px;
+}
+.fourBorders:hover{
+	opacity: 1;
+}
+a{
+	padding-left: 5px;
+	text-decoration: none;
+	color: rgb(100,100,100);
+	width: 100%;
+}
+li{
+	padding-top: 20px;
+}
+li:hover{
+	background-color: black;
+}
+a:hover{
+	text-decoration: none;
+	color: white;
+}
+.fa{
+	padding-bottom: 30px;
+}
+.under{
+	border-bottom: 1px solid black;
+	margin-left: 3%;
+	margin-right: 10%;
+}
+#btnContact:hover{
+	opacity:0.8;
+	border:4px solid white;
+}
+/* ------------------------Keyframes------------------------------- */
+@keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+} }
+@keyframes scaleOffer {
+	0%{
+		transform:scale(1);
+	}
+	50%{
+		transform:scale(1.03);
+	}
+}
+.scaleOffer{
+	animation-name:scaleOffer;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes changeInnen {
+	5%{
+		background: url(../../img/5.jpg);
+		background-size:cover;
+		background-position: center;
+	}
+	30% {
+		background: url(../../img/8.jpg);
+		background-size:cover;
+		background-position: center;
+
+	}
+	55% {
+		background: url(../../img/7.jpg);
+		background-size:cover;
+		background-position: center;
+
+	}
+	80% {
+		background: url(../../img/4.jpg);
+		background-size:cover;
+		background-position: center;
+	}
+	90%{
+		background: url(../../img/5.jpg);
+		background-size:cover;
+		background-position: center;
+	}
+}
+@keyframes changeAussen {
+	5%{
+		background: url(../../img/1.png);
+		background-size:cover;
+		background-position: center;
+	}
+	30% {
+		background: url(../../img/2.jpg);
+		background-size:cover;
+		background-position: center;
+
+	}
+	55% {
+		background: url(../../img/3.jpg);
+		background-size:cover;
+		background-position: center;
+
+	}
+	80% {
+		background: url(../../img/1.png);
+		background-size:cover;
+		background-position: center;
+	}
+}
+
+.is-showing{
+	opacity:1;
+}
+
+/* --------------------Section One------------------------------- */
+.nav-rec{
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	background-color: white;
+	z-index: 9999;
+}
+.c-hamburger {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background: white;
+  transition:all 0.5s ease-in-out;
+}
+.c-hamburger:focus {
+  outline: none;
+  transition:all 0.5s ease-in-out;
+}
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 18px;
+  right: 18px;
+  height: 6px;
+  background: black;
+}
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  content: "";
+}
+.c-hamburger span::before {
+  top: -11px;
+} 
+.c-hamburger span::after {
+  bottom: -11px;
+}
+.c-hamburger:hover span{
+	transform:scale(1.04);
+}
+.c-hamburger.is-active span{
+	transform:rotate(90deg);
+	transition:all 0.5s ease-in-out;
+}
+/* --------------------Liste Navbar------------------------------- */
+.menu{
+	color: black;
+	position: fixed;
+	margin:0px;
+	padding:0px;
+	top:0px;
+	line-height: 180%;
+	font-size: 24px;
+	background-color: white;
+	opacity: 0;
+	height: 1000vh;
+	width: 160px;
+	padding-top: 50px;
+	z-index: -1;
+	padding-top: 80px;
+	font-weight: 600;
+}
+.visible{
+	opacity: 1;
+}
+.c-hamburger ul{
+	display: fixed;
+}
+/* --------------------Section One------------------------------- */
+#sectionOne{
+	background: url(../../img/6.jpg);
+	background-size:cover;
+	height:100vh;
+	color: white;
+}
+#arrowDown{
+	position:absolute;
+	height: 20px;
+	top: 95%;
+	right:50%;
+}
+#textLanding{
+	font-weight: 200;
+	margin: 0px;
+	padding-top: 10%;
+}
+h2 span{
+	font-weight: 700;
+}
+#sectionOne a{
+	text-decoration: none;
+	border-bottom: 0px solid black;
+	color: white;
+}
+#sectionOne a:hover{
+	text-decoration: none;
+}
+#sectionOne a:focus{
+	text-decoration: none;
+}
+#btnContact{
+	padding: 10px 40px 10px 40px;
+	background-color: rgba(1,1,1,0);
+	border-style: none;
+	border:2px solid white;
+	font-size: 30px;
+	font-weight: 400;
+	margin-top: 260px;
+}
+/* --------------------Section Two------------------------------- */
+#sectionTwo{
+	height:600px;
+	color: white;
+	background: rgb(21,32,63);
+}
+.mittig{
+	text-align: center;
+	width:200px;
+	margin: 0 auto;
+	margin-top: 100px;
+	font-size: 18px;
+	border: 1px solid white;
+	border-right: none;
+	border-left: none;
+}
+#small{
+	text-align: right;
+	margin-bottom: 2px;
+}
+.mittig h2{
+	font-size: 72px;
+}
+#line{
+	border:1px solid white;
+	width:35%;
+	margin-bottom: 40px;
+}
+#sectionTwo .linien{
+	border-top: 1px solid white;
+	width:25%;
+}
+#sectionTwo .container{
+	width: 40%
+}
+#sectionTwo .container p{
+	margin-top: 50px;
+}
+
+/* --------------------Section Three------------------------------- */
+#sectionThree{
+	height:400px;
+	color: white;
+	position: relative;
+	z-index: 1;
+}
+.wrapper{
+	padding-left: 5%;
+	padding-right: 30%;
+	height: 600px;
+}
+
+.innen{
+	background: url(../../img/5.jpg);
+	width: 60%;
+	height: 100%;
+	left: 10%;
+	right: 30%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+#sectionThree .back{
+	background-color: rgba(0,0,0,0.7);
+	height: 100%;
+}
+#sectionThree .linien{
+	height: 90%;
+	margin-top: 2%;
+	border-top:1px solid white;
+}
+#sectionThree h3{
+	margin-left: 2%;
+	border-bottom: 1px solid white;
+ }
+/* --------------------Section Four------------------------------- */
+#sectionFour{
+	height:600px;
+	color: white;
+	text-align: center;
+	margin-top: -200px;
+}
+#sectionFour .col-md-3{
+	margin-top:50px;
+	transition:all 0.5s ease-in-out;
+}
+.four{
+	opacity: 0;
+}
+.mittig{
+	margin-top:50px;
+	transition:all 0.5s ease-in-out;
+}
+.col-md-12{
+	transition:all 0.5s ease-in-out;
+}
+/* --------------------Section Five------------------------------- */
+#sectionFive{
+	margin-top: 200px;
+	height:400px;
+	color: white;
+	position: relative;
+	z-index: 1;
+}
+.wrapper{
+	padding-left: 5%;
+	padding-right: 30%;
+	height: 600px;
+}
+
+.aussen{
+	background: url(../../img/5.jpg);
+	width: 60%;
+	height: 100%;
+	left: 10%;
+	right: 30%;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+#sectionFive .back{
+	background-color: rgba(0,0,0,0.7);
+	height: 100%;
+}
+#sectionFive h3{
+	margin-left: 2%;
+	border-bottom: 1px solid white;
+ }
+/* --------------------Section Six--------------------------------- */
+#sectionSix p{
+	margin: 0 auto;
+	width: 400px;
+	padding-bottom: 100px;
+}
+#sectionSix h3{
+	color: white;
+	text-align: center;
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
+	width: 120px;
+	margin:0 auto;
+	margin-top: -200px;
+	margin-bottom: 40px;
+	padding:20px 0px 20px 0px;
+}
+/* --------------------Section Seven------------------------------- */
+#sectionSeven{
+	background-color:rgb(20,20,20); 
+	color: rgb(230,230,230);
+	font-size: 10px;
+}
+#sectionSeven .kontainer{
+	padding-bottom: 30px;
+	padding-top: 10px;
+	padding-left: 140px;
+
+}
